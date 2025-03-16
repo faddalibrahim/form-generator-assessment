@@ -8,7 +8,6 @@ function App() {
       {...registrationFormConfig}
       onSubmitSuccess={(entity) => {
         console.log("Form submitted:", entity);
-        // Here you would typically save the data to a database or state
       }}
     />
   );
