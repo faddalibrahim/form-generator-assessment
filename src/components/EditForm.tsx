@@ -1,10 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import toast from "react-hot-toast";
-// import { useNavigate, useHistory } from "react-router-dom";
-// import { useLoadingSpinner } from "components/LoadingSpinner";
-// import { FileUpload } from "components/FileUpload";
-// import { uploadFile } from "services/firebase";
-// import { StoredFile, StoredFileState } from "data/common";
+import { PillList } from "./PillList";
 import {
   EditEntryType,
   ValidationType,
@@ -15,7 +11,6 @@ import {
 function validateValue(
   value: unknown,
   attributeName: string,
-  //   validationType: keyof typeof ValidationType
   validationType: (typeof ValidationType)[keyof typeof ValidationType]
 ) {
   switch (validationType) {
@@ -1723,6 +1718,34 @@ export function EditForm(props: EditFormProps) {
                         }}
                         isMultiple={true}
                       /> */}
+                    </div>
+                  );
+                } else if (editEntry.type === EditEntryType.PillList) {
+                  return (
+                    <div className="col-span-6 sm:col-span-4">
+                      <label
+                        htmlFor={editEntry.attribute}
+                        className="block text-sm font-medium text-gray-700"
+                      >
+                        {editEntry.attributeName}
+                        {editEntry.isRequired && "*"}
+                      </label>
+                      {editEntry.subName && (
+                        <p className="mt-1 text-sm text-gray-500">
+                          {editEntry.subName}
+                        </p>
+                      )}
+                      <div className="mt-1">
+                        <PillList
+                          value={entity[editEntry.attribute] || []}
+                          onChange={(newValue) => {
+                            const updatedEntity = { ...entity };
+                            updatedEntity[editEntry.attribute] = newValue;
+                            setEntity(updatedEntity);
+                          }}
+                          placeholder="Type and press Enter to add"
+                        />
+                      </div>
                     </div>
                   );
                 }
