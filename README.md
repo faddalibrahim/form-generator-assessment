@@ -19,23 +19,24 @@ A versatile form renderer that can display different types of input fields based
 
 The system supports numerous input types including:
 
-| Field Type     | Description                        |
-| -------------- | ---------------------------------- |
-| Text           | Standard text input                |
-| TextArea       | Multi-line text input              |
-| Select         | Dropdown selection                 |
-| Date           | Date picker                        |
-| Radio          | Radio button group                 |
-| Checkbox       | Single checkbox                    |
-| TextList       | Dynamic list of text inputs        |
-| DoubleTextList | Dynamic list of paired inputs      |
-| Address        | Complete address form              |
-| File           | File upload                        |
-| Photo          | Image upload with preview          |
-| ProfilePhoto   | Profile image upload with cropping |
-| FilePhoto      | Multiple image uploads             |
-| Article        | Rich text editor                   |
-| Showcase       | Portfolio showcase                 |
+| Field Type     | Description                          |
+| -------------- | ------------------------------------ |
+| Text           | Standard text input                  |
+| TextArea       | Multi-line text input                |
+| Select         | Dropdown selection                   |
+| Date           | Date picker                          |
+| Radio          | Radio button group                   |
+| Checkbox       | Single checkbox                      |
+| TextList       | Dynamic list of text inputs          |
+| DoubleTextList | Dynamic list of paired inputs        |
+| Address        | Complete address form                |
+| File           | File upload                          |
+| Photo          | Image upload with preview            |
+| ProfilePhoto   | Profile image upload with cropping   |
+| FilePhoto      | Multiple image uploads               |
+| Article        | Rich text editor                     |
+| Showcase       | Portfolio showcase                   |
+| PillList       | Tag-style input with removable pills |
 
 ## Example
 
