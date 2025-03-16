@@ -140,6 +140,13 @@ export const registrationFormConfig = {
       validations: [ValidationType.Number],
     },
     {
+      attribute: "Interests",
+      attributeName: "Current Hobbies",
+      subName: "List all your current hobbies",
+      type: EditEntryType.PillList,
+      isRequired: false,
+    },
+    {
       attribute: "termsAccepted",
       attributeName: "Terms and Conditions",
       subName: "I agree to the terms and conditions",
@@ -180,4 +187,5 @@ export const registrationFormConfig = {
     monthlyIncome: "",
     termsAccepted: false,
   },
+  interests: [],
 };
